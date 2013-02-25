@@ -15,13 +15,3 @@ vbell off
 
 shell -$SHELL
 
-chdir /home/bgarber/udog/udog-apps
-screen -t apps 0
-chdir /home/bgarber/udog/udog-gui/www
-screen -t gui 1
-chdir /home/bgarber/udog/udog-initrd
-screen -t initrd 2
-chdir /home/bgarber/udog
-screen -t build 3
-chdir /home/bgarber
-

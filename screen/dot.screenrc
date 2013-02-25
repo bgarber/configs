@@ -1,0 +1,27 @@
+hardstatus on
+hardstatus alwayslastline "%c %w"
+hardstatus string "%{Gb }%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %c%a "
+
+
+# terminfo and termcap for nice 256 color terminal
+# allow bold colors - necessary for some reason
+attrcolor b ".I" 
+# tell screen how to set colors. AB = background, AF=foreground 
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm' 
+# erase background with current bg color 
+defbce "on"
+
+vbell off
+
+shell -$SHELL
+
+chdir /home/bgarber/udog/udog-apps
+screen -t apps 0
+chdir /home/bgarber/udog/udog-gui/www
+screen -t gui 1
+chdir /home/bgarber/udog/udog-initrd
+screen -t initrd 2
+chdir /home/bgarber/udog
+screen -t build 3
+chdir /home/bgarber
+

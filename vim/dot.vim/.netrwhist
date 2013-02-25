@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/bgarber/Projetos/Saphire/SaphireVM/samples'
+let g:netrw_dirhist_2='/usr/share/xsessions'
+let g:netrw_dirhist_3='/home/bgarber/Downloads/Programs/Executables/WebNMS/C-Agent/projects/ProcWatcher/mibs'
+let g:netrw_dirhist_4='/etc/apt/preferences.d'
+let g:netrw_dirhist_5='/home/bgarber/.config/mupen64plus'
+let g:netrw_dirhist_6='/home/bgarber/udog-380/udog-apps/hpem_netreg'
+let g:netrw_dirhist_7='/home/bgarber/f_ipv6_380/udog-apps/cli2'
+let g:netrw_dirhist_8='/home/bgarber/f_ipv6_380/udog-apps/envtools'
+let g:netrw_dirhist_9='/home/bgarber/r380/udog-apps/envtools'

@@ -33,6 +33,12 @@
 ; Configure indentation
 (setq default-tab-width 4)
 
+; Change the font
+(set-default-font "Monospace-10")
+
+; Set copy to clipboard
+(setq x-select-enable-clipboard t)
+
 ; Make keys like 'end' and 'delete' work as expected
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
@@ -57,7 +63,8 @@
 (setq-default indent-tabs-mode nil)
 
 ; Auto-indent
-;(define-key global-map (kbd "RET") 'newline-and-indent)
+(add-hook 'lisp-mode-hook '(lambda ()
+  (local-set-key (kbd "RET") 'newline-and-indent)))
 
 ; Lines with trailings spaces are evil, too. But, since they are not *that*
 ; evil, highlight them with a color more discrete than the default red
@@ -82,7 +89,13 @@
  '(color-theme-selection "Comidia" nil (color-theme_seldefcustom))
  '(global-linum-mode t)
  '(iswitchb-mode t)
- '(lisp-body-indent 4)
+ '(lisp-body-indent 2)
+ '(lisp-indent-maximum-backtracking 2)
+ '(lisp-loop-forms-indentation 2)
+ '(lisp-loop-keyword-indentation 2)
+ '(lisp-simple-loop-indentation 2)
+ '(lisp-tag-body-indentation 2)
+ '(lisp-tag-indentation 2)
  '(recentf-mode t)
  '(ruby-indent-level 4))
 (custom-set-faces

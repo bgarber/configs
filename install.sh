@@ -6,7 +6,6 @@
 cat $HOME/.bashrc bash/dot.bashrc >> $HOME/.bashrc-new
 rm $HOME/.bashrc
 mv $HOME/.bashrc-new $HOME/.bashrc
-source $HOME/.bashrc
 echo "Bash configuration script updated."
 
 # Installing Vim configuration files.
@@ -16,12 +15,17 @@ cp vim/dot.vimrc $HOME/.vimrc
 echo "Vim configuration updated."
 
 # Installing Emacs configuration files.
-rm -rf $HOME/.emacs
+rm $HOME/.emacs
 cp emacs/dot.emacs $HOME/.emacs
 echo "Emacs configuration updated."
 
 # Installing Screen configuration file
-rm -rf $HOME/.screenrc
+rm $HOME/.screenrc
 cp screen/dot.screenrc $HOME/.screenrc
 echo "Screen configuration updated."
+
+# Installing TMux configuration file
+rm $HOME/.tmux.conf
+cp tmux/dot.tmux.conf $HOME/.tmux.conf
+echo "TMux configuration updated."
 

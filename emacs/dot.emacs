@@ -34,7 +34,7 @@
 (setq default-tab-width 4)
 
 ; Change the font
-(set-default-font "Monospace-10")
+(set-default-font "Terminus-10")
 
 ; Set copy to clipboard
 (setq x-select-enable-clipboard t)
@@ -82,12 +82,13 @@
 
 ;; Start of the emacs "customize" preferences. DON'T TOUCH THIS!
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(color-theme-selection "Comidia" nil (color-theme_seldefcustom))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(color-theme-selection "Calm Forest" nil (color-theme_seldefcustom))
  '(global-linum-mode t)
+ '(highlight-current-line-globally nil nil (highlight-current-line))
  '(iswitchb-mode t)
  '(lisp-body-indent 2)
  '(lisp-indent-maximum-backtracking 2)
@@ -99,8 +100,8 @@
  '(recentf-mode t)
  '(ruby-indent-level 4))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )

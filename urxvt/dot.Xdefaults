@@ -131,3 +131,5 @@
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
 ! URxvt*url-launcher:                   google-chrome
+  URxvt*keysym.Home:                    \033[1~
+  URxvt*keysym.End:                     \033[4~

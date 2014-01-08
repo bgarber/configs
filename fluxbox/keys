@@ -1,0 +1,12 @@
+# volume settings
+Mod1 Up   :Exec ~/bin/fb-chvolume inc
+Mod1 Down :Exec ~/bin/fb-chvolume dec
+Control Mod1 m :Exec ~/bin/fb-chvolume tog
+
+# control music player
+Control Mod1 p :Exec ~/bin/fb-mpris-cmd play
+Control Mod1 s :Exec ~/bin/fb-mpris-cmd stop
+
+# lock the screen
+Control Mod1 l :ExecCommand xscreensaver-command -lock
+

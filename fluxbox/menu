@@ -1,0 +1,11 @@
+[begin] (fluxbox)
+    [exec]    (URxvt)         {/usr/bin/urxvt}
+    [exec]    (Google Chrome) {/usr/bin/google-chrome}
+    [exec]    (Opera)         {/usr/bin/opera}
+    [exec]    (Iceweasel)     {/usr/bin/iceweasel}
+    [exec]    (Evolution)     {/usr/bin/evolution}
+    [exec]    (Rhythmbox)     {/usr/bin/rhythmbox}
+    [exec]    (Banshee)       {/usr/bin/banshee}
+    [nop] (--------)
+    [include] (/etc/X11/fluxbox/fluxbox-menu)
+[end]

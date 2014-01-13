@@ -25,10 +25,7 @@ fbsetbg -l
 xscreensaver -no-splash &
 
 # Gnome keyring
-gnome-keyring-daemon --start --components=gpg &
-gnome-keyring-daemon --start --components=ssh &
-gnome-keyring-daemon --start --components=secrets &
-gnome-keyring-daemon --start --components=pkcs11 &
+gnome-keyring-daemon --start --components=gpg,ssh,secrets,pkcs11 &
 
 # Debian-local change:
 #   - fbautostart has been added with a quick hack to check to see if it

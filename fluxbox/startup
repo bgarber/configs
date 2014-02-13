@@ -27,6 +27,9 @@ xscreensaver -no-splash &
 # Gnome keyring
 gnome-keyring-daemon --start --components=gpg,ssh,secrets,pkcs11 &
 
+# Start XFCE4 settings to manage GTK and icons.
+xfsettingsd &
+
 # Debian-local change:
 #   - fbautostart has been added with a quick hack to check to see if it
 #     exists. If it does, we'll start it up by default.

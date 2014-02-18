@@ -15,8 +15,9 @@
 # Turn off annoying system bell
 xset b off &
 
-# Turn on true transparency
-xcompmgr -c &
+# Turn on compositing
+#xcompmgr -c & #=> xcompmgr is heavy and buggy.
+unagi &
 
 # Set the last wallpaper
 fbsetbg -l

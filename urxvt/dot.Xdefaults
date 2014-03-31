@@ -33,7 +33,7 @@
 ! URxvt*cursorUnderline:                boolean
   URxvt*cursorBlink:                    true
   URxvt*pointerBlank:                   false
-  URxvt*background:                     rgba:1111/1111/1111/dddd
+  URxvt*background:                     rgba:0000/0000/0000/dddd
   URxvt*foreground:                     white
 ! Tango color palette !
 ! URxvt*color0:                         #2e3436

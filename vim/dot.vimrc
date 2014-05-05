@@ -14,8 +14,9 @@ syntax on
 set background=dark
 
 " Esquema de cores
-"let g:solarized_termcolors=256
-colorscheme inkpot
+let g:solarized_termcolors=256
+"colorscheme inkpot
+colorscheme solarized
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -201,6 +202,12 @@ au BufNewFile,BufRead *.t2t set ft=txt2tags
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" on CGI files, set the filetype as haserl
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufNewFile,BufRead *.cgi set ft=haserl
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configuracoes gráficas (gvim) para cada OS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
@@ -212,7 +219,7 @@ if has("gui_running")
     set guioptions-=T
 
     if has("unix")
-        set guifont=Bitstream\ Vera\ Sans\ Mono\ 8
+        set guifont=Terminus\ 10
     else
         set guifont=Lucida\ Console:h9
     endif

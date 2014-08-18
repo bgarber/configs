@@ -14,9 +14,10 @@ syntax on
 set background=dark
 
 " Esquema de cores
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
+"colorscheme solarized
 "colorscheme inkpot
-colorscheme solarized
+colorscheme molokai
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -87,6 +88,12 @@ map <C-w>e 100<C-w>+
 imap <C-w>e 100<C-w>+
 map <C-w>s 100<C-w>-
 imap <C-w>s 100<C-w>-
+
+" I hate to type a lot just to get to the next/previous quickfix result
+map <Leader>qo :copen<CR>
+map <Leader>qc :cclose<CR>
+map <Leader>qn :cnext<CR>
+map <Leader>qp :cprevious<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -194,6 +201,8 @@ function CFuncoes()
 endfunction
 au FileType h,c,cpp,java,perl,rb call CFuncoes()
 
+"Map frequent used printk
+inoremap printk printk(KERN_ERR "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " txt2tags usage ;)
@@ -219,7 +228,7 @@ if has("gui_running")
     set guioptions-=T
 
     if has("unix")
-        set guifont=Terminus\ 10
+        set guifont=Monospace\ 10
     else
         set guifont=Lucida\ Console:h9
     endif

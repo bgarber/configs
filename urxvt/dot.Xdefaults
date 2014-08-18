@@ -33,9 +33,9 @@
 ! URxvt*cursorUnderline:                boolean
   URxvt*cursorBlink:                    true
   URxvt*pointerBlank:                   false
-  URxvt*background:                     rgba:0000/0000/0000/dddd
+  URxvt*background:                     rgba:0000/0000/0000/ffff
   URxvt*foreground:                     white
-! Tango color palette !
+!!! Tango color palette !!!
 ! URxvt*color0:                         #2e3436
 ! URxvt*color1:                         #a40000
 ! URxvt*color2:                         #4e9a06
@@ -52,29 +52,29 @@
 ! URxvt*color13:                        #ad7fa8
 ! URxvt*color14:                        #fcaf3e
 ! URxvt*color15:                        #eeeeec
-! Gnome-terminal color palette !
-! black
+!!! Gnome-terminal color palette !!!
+!! black
   URxvt*color0  : #2E3436
   URxvt*color8  : #555753
-! red
+!! red
   URxvt*color1  : #CC0000
   URxvt*color9  : #EF2929
-! green
+!! green
   URxvt*color2  : #4E9A06
   URxvt*color10 : #8AE234
-! yellow
+!! yellow
   URxvt*color3  : #C4A000
   URxvt*color11 : #FCE94F
-! blue
+!! blue
   URxvt*color4  : #3465A4
   URxvt*color12 : #729FCF
-! magenta
+!! magenta
   URxvt*color5  : #75507B
   URxvt*color13 : #AD7FA8
-! cyan
+!! cyan
   URxvt*color6  : #06989A
   URxvt*color14 : #34E2E2
-! white
+!! white
   URxvt*color7  : #D3D7CF
   URxvt*color15 : #EEEEEC
 ! URxvt*colorBD:                        color
@@ -93,8 +93,11 @@
 ! URxvt*borderColor:                    color
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
-!  URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/96/Terminal.png
-  URxvt*font:                           xft:Terminus:10
+! URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/96/Terminal.png
+  URxvt*font:                           xft:Terminus:style=Regular:size=13
+!  URxvt*font:                           xft:Monospace:size=11:antialias=true:autohint=true
+!  URxvt*font:                           xft:Bitstream Vera Sans Mono:size=12:antialias=true:autohint=true
+!  URxvt*font:                           xft:Inconsolata:style=Medium:size=11:antialias=true:autohint=true
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -105,7 +108,7 @@
 ! URxvt*imFont:                         fontname
 ! URxvt*title:                          string
 ! URxvt*iconName:                       string
-  URxvt*saveLines:                      4095
+  URxvt*saveLines:                      5000
 ! URxvt*buffered:                       boolean
   URxvt*depth:                          32
 ! URxvt*visual:                         number
@@ -116,7 +119,7 @@
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
 ! URxvt*lineSpace:                      number
-! URxvt*letterSpace:                    number
+  URxvt*letterSpace:                    -1
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
 ! URxvt*backspacekey:                   string
@@ -159,3 +162,4 @@
   URxvt*keysym.Home:                    \033[1~
   URxvt*keysym.End:                     \033[4~
   URxvt*keysym.F11:                     perl:fullscreen:switch
+

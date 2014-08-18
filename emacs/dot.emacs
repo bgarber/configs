@@ -34,7 +34,7 @@
 (setq default-tab-width 4)
 
 ; Change the font
-(set-default-font "Terminus-10")
+(set-default-font "Droid Sans Mono-12")
 
 ; Set copy to clipboard
 (setq x-select-enable-clipboard t)
@@ -86,7 +86,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(color-theme-selection "Calm Forest" nil (color-theme_seldefcustom))
+ '(color-theme-selection "Cooper Dark" nil (color-theme_seldefcustom))
  '(global-linum-mode t)
  '(highlight-current-line-globally nil nil (highlight-current-line))
  '(iswitchb-mode t)

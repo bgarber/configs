@@ -17,7 +17,10 @@ set background=dark
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "colorscheme inkpot
-colorscheme molokai
+colorscheme tango2_modified
+"let xterm16_brightness = 'high'
+"let xterm16_colormap   = 'allblue'
+"colorscheme xterm16
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,7 +42,6 @@ set mouse=i
 set mousemodel=popup
 " Coloca o cursor na última linha editada desde a última abertura
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM Interface
@@ -77,11 +79,11 @@ nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
 
 " Ctags support!
-set tags=./tags,../tags,../../tags
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-imap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-map <C-f> :vertical split<CR>:exec("tag ".expand("<cword>"))<CR>
-imap <C-f> :vertical split<CR>:exec("tag ".expand("<cword>"))<CR>
+"set tags=./tags,../tags,../../tags
+"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+"imap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+"map <C-f> :vertical split<CR>:exec("tag ".expand("<cword>"))<CR>
+"imap <C-f> :vertical split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Expand e Squeeze (extender de diminuir uma janela)
 map <C-w>e 100<C-w>+
@@ -89,11 +91,13 @@ imap <C-w>e 100<C-w>+
 map <C-w>s 100<C-w>-
 imap <C-w>s 100<C-w>-
 
-" I hate to type a lot just to get to the next/previous quickfix result
-map <Leader>qo :copen<CR>
-map <Leader>qc :cclose<CR>
-map <Leader>qn :cnext<CR>
-map <Leader>qp :cprevious<CR>
+" I hate to type a lot just to get to cicle in the quickfix results
+nmap ,<Space> :cnext<CR>
+nmap ,<Backspace> :cprevious<CR>
+
+" Mappings for tab cicling.
+map <C-h> :tabprevious<CR>
+map <C-l> :tabnext<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,6 +118,10 @@ autocmd BufNewFile,BufRead *.js,*.htc,*.c,*.tmpl inoremap $c /***<cr><BS>***/<es
 " Eu
 iab xdata <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 iab xnome Bryan Garber da Silva
+
+" Frequent used logs
+iab printk printk(KERN_ERR "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);
+iab syslog syslog(LOG_ERR, "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -201,8 +209,6 @@ function CFuncoes()
 endfunction
 au FileType h,c,cpp,java,perl,rb call CFuncoes()
 
-"Map frequent used printk
-inoremap printk printk(KERN_ERR "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " txt2tags usage ;)
@@ -228,9 +234,9 @@ if has("gui_running")
     set guioptions-=T
 
     if has("unix")
-        set guifont=Monospace\ 10
+        set guifont=Monospace\ 11
     else
-        set guifont=Lucida\ Console:h9
+        set guifont=Lucida\ Console:h10
     endif
 endif
 

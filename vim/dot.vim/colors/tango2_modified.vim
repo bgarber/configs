@@ -18,7 +18,7 @@ hi Comment      guifg=#babdb6 guibg=NONE guisp=NONE gui=italic ctermfg=250 cterm
 hi Constant     guifg=#8ae234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
 hi String       guifg=#fcb03e guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
 hi Character    guifg=#8ae234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
-hi Number       guifg=#ad7fa8 guibg=NONE guisp=NONE gui=NONE ctermfg=139 ctermbg=NONE cterm=NONE
+hi Number       guifg=#ad7fa8 guibg=NONE guisp=NONE gui=bold ctermfg=139 ctermbg=NONE cterm=bold
 hi Boolean      guifg=#729FCF guibg=NONE guisp=NONE gui=NONE ctermfg=110 ctermbg=NONE cterm=NONE
 "hi Float -- no settings --
 
@@ -58,6 +58,8 @@ hi Debug        guifg=#5EAFE5 guibg=NONE guisp=NONE gui=NONE ctermfg=74 ctermbg=
 "hi Error -- no settings --
 
 hi Todo         guifg=#EBC450 guibg=NONE guisp=NONE gui=NONE ctermfg=221 ctermbg=NONE cterm=NONE
+
+hi cConstant    guifg=#ad7fa8 guibg=NONE guisp=NONE gui=bold ctermfg=139 ctermbg=NONE cterm=bold
 
 hi Search       guifg=#2e3436 guibg=#8f5902 guisp=#8f5902 gui=NONE ctermfg=236 ctermbg=94 cterm=NONE
 "hi IncSearch -- no settings --

@@ -13,6 +13,8 @@ endif
 set t_Co=256
 let g:colors_name = "tango2_modified"
 
+hi Normal guifg=#eeeeec guibg=#2E3436 guisp=#2E3436 gui=NONE ctermfg=254 ctermbg=236 cterm=NONE
+
 hi Comment      guifg=#babdb6 guibg=NONE guisp=NONE gui=italic ctermfg=250 ctermbg=NONE cterm=NONE
 
 hi Constant     guifg=#8ae234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
@@ -93,7 +95,6 @@ hi PMenuThumb   guifg=NONE guibg=#a4a6a8 guisp=#a4a6a8 gui=NONE ctermfg=NONE cte
 "hi NonText -- no settings --
 "hi ErrorMsg -- no settings --
 hi LineNr guibg=NONE guifg=#eeeeec ctermbg=NONE ctermfg=254
-hi Normal guifg=#eeeeec guibg=#2E3436 guisp=#2E3436 gui=NONE ctermfg=255 ctermbg=237 cterm=NONE
 "hi SpellRare -- no settings --
 "hi EnumerationValue -- no settings --
 "hi EnumerationName -- no settings --

@@ -102,15 +102,10 @@
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
   URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/96/Terminal.png
-  URxvt*font:                           xft:Input Mono Light:style=Regular:antialias=true:autohint=true:size=11
-!  URxvt*font:                           xft:Terminus:style=Regular:size=13
-!  URxvt*font:                           xft:Monospace:size=11:antialias=true:autohint=true
-!  URxvt*font:                           xft:Bitstream Vera Sans Mono:size=12:antialias=true:autohint=true
-!  URxvt*font:                           xft:Inconsolata:style=Medium:size=11:antialias=true:autohint=true
-!  URxvt*font:                           xft:Droid Sans Mono:size=12:antialias=true:autohint=true
-! URxvt*boldFont:                       fontname
-! URxvt*italicFont:                     fontname
-! URxvt*boldItalicFont:                 fontname
+  URxvt*font:                           xft:Liberation Mono:style=Regular:antialias=true:autohint=true:size=11
+  URxvt*boldFont:                       xft:Liberation Mono:style=Bold:antialias=true:autohint=true:size=11
+  URxvt*italicFont:                     xft:Liberation Mono:style=Italic:antialias=true:autohint=true:size=11
+  URxvt*boldItalicFont:                 xft:Liberation Mono:style=Bold Italic:antialias=true:autohint=true:size=11
 ! URxvt*intensityStyles:                boolean
 ! URxvt*inputMethod:                    name
 ! URxvt*preeditType:                    style

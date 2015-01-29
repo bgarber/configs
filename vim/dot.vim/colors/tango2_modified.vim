@@ -13,45 +13,45 @@ endif
 set t_Co=256
 let g:colors_name = "tango2_modified"
 
-hi Normal guifg=#eeeeec guibg=#2E3436 guisp=#2E3436 gui=NONE ctermfg=254 ctermbg=236 cterm=NONE
+hi Normal         guifg=#EEEEEC guibg=#2E3436 guisp=#2E3436 gui=NONE ctermfg=254 ctermbg=236 cterm=NONE
 
-hi Comment      guifg=#babdb6 guibg=NONE guisp=NONE gui=italic ctermfg=250 ctermbg=NONE cterm=NONE
+hi Comment        guifg=#BABDB6 guibg=NONE guisp=NONE gui=italic ctermfg=250 ctermbg=NONE cterm=NONE
 
-hi Constant     guifg=#8ae234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
-hi String       guifg=#fcb03e guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
-hi Character    guifg=#8ae234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
-hi Number       guifg=#ad7fa8 guibg=NONE guisp=NONE gui=bold ctermfg=139 ctermbg=NONE cterm=bold
-hi Boolean      guifg=#729FCF guibg=NONE guisp=NONE gui=NONE ctermfg=110 ctermbg=NONE cterm=NONE
+hi Constant       guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi String         guifg=#FCAF3E guibg=NONE guisp=NONE gui=NONE ctermfg=215 ctermbg=NONE cterm=NONE
+hi Character      guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi Number         guifg=#AD7FA8 guibg=NONE guisp=NONE gui=bold ctermfg=139 ctermbg=NONE cterm=bold
+hi Boolean        guifg=#729FCF guibg=NONE guisp=NONE gui=NONE ctermfg=110 ctermbg=NONE cterm=NONE
 "hi Float -- no settings --
 
-hi Identifier   guifg=#AD7FA8 guibg=NONE guisp=NONE gui=NONE ctermfg=139 ctermbg=NONE cterm=NONE
-hi Function     guifg=#9BCF8D guibg=NONE guisp=NONE gui=bold ctermfg=114 ctermbg=NONE cterm=bold
+hi Identifier     guifg=#AD7FA8 guibg=NONE guisp=NONE gui=NONE ctermfg=139 ctermbg=NONE cterm=NONE
+hi Function       guifg=#9BCF8D guibg=NONE guisp=NONE gui=bold ctermfg=114 ctermbg=NONE cterm=bold
 
-hi Statement    guifg=#729FCF guibg=NONE guisp=NONE gui=bold ctermfg=110 ctermbg=NONE cterm=bold
-hi Conditional  guifg=#729FCF guibg=NONE guisp=NONE gui=bold ctermfg=110 ctermbg=NONE cterm=bold
-hi Repeat       guifg=#729FCF guibg=NONE guisp=NONE gui=bold ctermfg=110 ctermbg=NONE cterm=bold
-hi Label        guifg=#729FCF guibg=NONE guisp=NONE gui=bold ctermfg=110 ctermbg=NONE cterm=bold
-hi Operator     guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
-hi Keyword      guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
-hi Exception    guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi Statement      guifg=#729FCF guibg=NONE guisp=NONE gui=bold ctermfg=110 ctermbg=NONE cterm=bold
+hi Conditional    guifg=#729FCF guibg=NONE guisp=NONE gui=bold ctermfg=110 ctermbg=NONE cterm=bold
+hi Repeat         guifg=#729FCF guibg=NONE guisp=NONE gui=bold ctermfg=110 ctermbg=NONE cterm=bold
+hi Label          guifg=#729FCF guibg=NONE guisp=NONE gui=bold ctermfg=110 ctermbg=NONE cterm=bold
+hi Operator       guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi Keyword        guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi Exception      guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
 
-hi PreProc      guifg=#fce94f guibg=NONE guisp=NONE gui=NONE ctermfg=227 ctermbg=NONE cterm=NONE
-"hi Include     guifg=#e9ba6e guibg=NONE guisp=NONE gui=NONE ctermfg=179 ctermbg=NONE cterm=NONE
-"hi Define      guifg=#fce94f guibg=NONE guisp=NONE gui=NONE ctermfg=226 ctermbg=NONE cterm=NONE
-"hi Macro       guifg=#e9ba6e guibg=NONE guisp=NONE gui=NONE ctermfg=179 ctermbg=NONE cterm=NONE
-"hi PreCondit   guifg=#e9ba6e guibg=NONE guisp=NONE gui=NONE ctermfg=179 ctermbg=NONE cterm=NONE
+hi PreProc        guifg=#fce94f guibg=NONE guisp=NONE gui=NONE ctermfg=227 ctermbg=NONE cterm=NONE
+"hi Include       guifg=#e9ba6e guibg=NONE guisp=NONE gui=NONE ctermfg=179 ctermbg=NONE cterm=NONE
+"hi Define        guifg=#fce94f guibg=NONE guisp=NONE gui=NONE ctermfg=226 ctermbg=NONE cterm=NONE
+"hi Macro         guifg=#e9ba6e guibg=NONE guisp=NONE gui=NONE ctermfg=179 ctermbg=NONE cterm=NONE
+"hi PreCondit     guifg=#e9ba6e guibg=NONE guisp=NONE gui=NONE ctermfg=179 ctermbg=NONE cterm=NONE
 
-hi Type         guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
-hi StorageClass guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
-hi Structure    guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
-hi Typedef      guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi Type           guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi StorageClass   guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi Structure      guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
+hi Typedef        guifg=#8AE234 guibg=NONE guisp=NONE gui=NONE ctermfg=113 ctermbg=NONE cterm=NONE
 
-hi Special      guifg=#5EAFE5 guibg=NONE guisp=NONE gui=NONE ctermfg=74 ctermbg=NONE cterm=NONE
-hi SpecialChar  guifg=#5EAFE5 guibg=NONE guisp=NONE gui=NONE ctermfg=74 ctermbg=NONE cterm=NONE
-hi Tag          guifg=#5EAFE5 guibg=NONE guisp=NONE gui=NONE ctermfg=74 ctermbg=NONE cterm=NONE
-hi Delimiter    guifg=#5EAFE5 guibg=NONE guisp=NONE gui=NONE ctermfg=74 ctermbg=NONE cterm=NONE
-hi SpecialComment guifg=#5EAFE5 guibg=NONE guisp=NONE gui=NONE ctermfg=74 ctermbg=NONE cterm=NONE
-hi Debug        guifg=#5EAFE5 guibg=NONE guisp=NONE gui=NONE ctermfg=74 ctermbg=NONE cterm=NONE
+hi Special        guifg=#CE5C00 guibg=NONE guisp=NONE gui=BOLD ctermfg=166 ctermbg=NONE cterm=BOLD
+hi SpecialChar    guifg=#CE5C00 guibg=NONE guisp=NONE gui=BOLD ctermfg=166 ctermbg=NONE cterm=BOLD
+hi Tag            guifg=#CE5C00 guibg=NONE guisp=NONE gui=BOLD ctermfg=166 ctermbg=NONE cterm=BOLD
+hi Delimiter      guifg=#CE5C00 guibg=NONE guisp=NONE gui=BOLD ctermfg=166 ctermbg=NONE cterm=BOLD
+hi SpecialComment guifg=#CE5C00 guibg=NONE guisp=NONE gui=BOLD ctermfg=166 ctermbg=NONE cterm=BOLD
+hi Debug          guifg=#CE5C00 guibg=NONE guisp=NONE gui=BOLD ctermfg=166 ctermbg=NONE cterm=BOLD
 
 "hi Underlined -- no settings --
 

@@ -34,7 +34,7 @@
 (setq default-tab-width 4)
 
 ; Change the font
-(set-default-font "Droid Sans Mono-12")
+(set-frame-font "Liberation Mono-11")
 
 ; Set copy to clipboard
 (setq x-select-enable-clipboard t)
@@ -86,10 +86,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(color-theme-selection "Cooper Dark" nil (color-theme_seldefcustom))
+ '(custom-enabled-themes (quote (tango-dark)))
  '(global-linum-mode t)
  '(highlight-current-line-globally nil nil (highlight-current-line))
- '(iswitchb-mode t)
+ '(ido-mode (quote both) nil (ido))
  '(lisp-body-indent 2)
  '(lisp-indent-maximum-backtracking 2)
  '(lisp-loop-forms-indentation 2)

@@ -120,8 +120,8 @@ iab xdata <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 iab xnome Bryan Garber da Silva
 
 " Frequent used logs
-iab printk printk(KERN_ERR "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);
-iab syslog syslog(LOG_ERR, "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);
+iab printk printk(KERN_ERR "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);<DEL><DEL>
+iab syslog syslog(LOG_ERR, "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);<DEL><DEL>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -147,11 +147,11 @@ set foldmethod=syntax
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
+set shiftwidth=8
+set softtabstop=8
+set tabstop=8
 set smarttab
-set expandtab
+"set expandtab
 set lbr
 
 
@@ -168,8 +168,8 @@ set si
 set cindent
 
 "Wrap lines
-"set wrap
-set nowrap
+set wrap
+"set nowrap
 
 "Mostrar tabs e spaces!
 set listchars=tab:»·,trail:·
@@ -234,7 +234,7 @@ if has("gui_running")
     set guioptions-=T
 
     if has("unix")
-        set guifont=Monospace\ 11
+        set guifont=Liberation\ Mono\ 11
     else
         set guifont=Lucida\ Console:h10
     endif

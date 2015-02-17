@@ -101,7 +101,7 @@
 ! URxvt*borderColor:                    color
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
-  URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/96/Terminal.png
+  URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/scalable/terminal.svg
   URxvt*font:                           xft:Liberation Mono:style=Regular:antialias=true:autohint=true:size=11
   URxvt*boldFont:                       xft:Liberation Mono:style=Bold:antialias=true:autohint=true:size=11
   URxvt*italicFont:                     xft:Liberation Mono:style=Italic:antialias=true:autohint=true:size=11

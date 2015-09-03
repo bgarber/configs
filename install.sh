@@ -29,3 +29,11 @@ rm $HOME/.tmux.conf
 cp tmux/dot.tmux.conf $HOME/.tmux.conf
 echo "TMux configuration updated."
 
+# Installing ZSH and Oh-My-ZSH configs
+rm $HOME/.zshrc $HOME/.zshenv $HOME/.zfunctions
+cp zsh/dot.zshrc $HOME/.zshrc
+cp zsh/dot.zshevn $HOME/.zshenv
+cp zsh/dot.zfunctions $HOME/.zfunctions
+if [ -d $HOME/.oh-my-zsh ]; then
+    cp zsh/*.zsh-theme $HOME/.oh-my-zsh/themes/
+

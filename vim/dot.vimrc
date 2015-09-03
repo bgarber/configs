@@ -78,13 +78,6 @@ hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=whi
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
 
-" Ctags support!
-"set tags=./tags,../tags,../../tags
-"map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-"imap <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-"map <C-f> :vertical split<CR>:exec("tag ".expand("<cword>"))<CR>
-"imap <C-f> :vertical split<CR>:exec("tag ".expand("<cword>"))<CR>
-
 " Expand e Squeeze (extender de diminuir uma janela)
 map <C-w>e 100<C-w>+
 imap <C-w>e 100<C-w>+
@@ -98,6 +91,12 @@ nmap ,<Backspace> :cprevious<CR>
 " Mappings for tab cicling.
 map <C-h> :tabprevious<CR>
 map <C-l> :tabnext<CR>
+
+" Load gtags auto map
+let Gtags_Auto_Map = 1
+
+" Setup cscope output to Quickfix!
+set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -120,8 +119,8 @@ iab xdata <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 iab xnome Bryan Garber da Silva
 
 " Frequent used logs
-iab printk printk(KERN_ERR "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);<DEL><DEL>
-iab syslog syslog(LOG_ERR, "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);<DEL><DEL>
+iab klog printk(KERN_ERR "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);<DEL><DEL>
+iab slog syslog(LOG_ERR, "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);<DEL><DEL>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -147,11 +146,11 @@ set foldmethod=syntax
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Text options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set shiftwidth=8
-set softtabstop=8
-set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 set smarttab
-"set expandtab
+set expandtab
 set lbr
 
 
@@ -167,9 +166,8 @@ set si
 "C-style indenting
 set cindent
 
-"Wrap lines
-set wrap
-"set nowrap
+"Don't wrap lines
+set nowrap
 
 "Mostrar tabs e spaces!
 set listchars=tab:»·,trail:·
@@ -194,6 +192,7 @@ inoremap <s-tab> <c-r>=InsertTabWrapper ("backward")<cr>
 
 function TexFunctions()
     "set tw=70
+    set wrap
     imap ( ()<Left>
     imap [ []<Left>
     imap { {}<Left>
@@ -202,7 +201,6 @@ endfunction
 au FileType tex,bib call TexFunctions()
 
 function CFuncoes()
-    set nowrap
     imap ( ()<Left>
     imap [ []<Left>
     imap { {<CR>}<Up><End><CR>
@@ -226,7 +224,7 @@ au BufNewFile,BufRead *.cgi set ft=haserl
 " Configuracoes gráficas (gvim) para cada OS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
-    win 90 50
+    win 85 50
 
     set guioptions-=m
     set guioptions-=r
@@ -234,7 +232,7 @@ if has("gui_running")
     set guioptions-=T
 
     if has("unix")
-        set guifont=Liberation\ Mono\ 11
+        set guifont=DejaVu\ Sans\ Mono\ 11
     else
         set guifont=Lucida\ Console:h10
     endif

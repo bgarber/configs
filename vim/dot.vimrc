@@ -106,7 +106,7 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 set laststatus=2
 
 " Format the statusline
-set statusline=\ %t%m%r%h\ %w\ %=%l,%c\ \(%p%%\)
+set statusline=\ %f%m%r%h\ %w%=%l,%c\ \(%p%%\)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

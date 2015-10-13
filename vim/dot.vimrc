@@ -72,13 +72,8 @@ set wildmenu
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Some shortcut keys
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Marcar uma linha
-hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-nnoremap <silent> <Leader>l ml:execute 'match Search /\%'.line('.').'l/'<CR>
 
-" Expand e Squeeze (extender de diminuir uma janela)
+" Expand & Squeeze (extender de diminuir uma janela)
 map <C-w>e 100<C-w>+
 imap <C-w>e 100<C-w>+
 map <C-w>s 100<C-w>-
@@ -91,6 +86,14 @@ nmap ,<Backspace> :cprevious<CR>
 " Mappings for tab cicling.
 map <C-h> :tabprevious<CR>
 map <C-l> :tabnext<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Load Pathogen
+execute pathogen#infect()
 
 " Load gtags auto map
 let Gtags_Auto_Map = 1
@@ -112,8 +115,7 @@ set statusline=\ %f%m%r%h\ %w%=%l,%c\ \(%p%%\)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Abbrevs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Comentários
-autocmd BufNewFile,BufRead *.js,*.htc,*.c,*.tmpl inoremap $c /***<cr><BS>***/<esc>O
+
 " Eu
 iab xdata <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 iab xnome Bryan Garber da Silva

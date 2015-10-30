@@ -168,9 +168,3 @@
   URxvt*keysym.End:                     \033[4~
   URxvt*keysym.F11:                     perl:fullscreen:switch
 
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintfull
-

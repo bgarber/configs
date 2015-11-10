@@ -226,7 +226,7 @@ au BufNewFile,BufRead *.cgi set ft=haserl
 " Configuracoes gráficas (gvim) para cada OS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
-    win 85 50
+    win 90 50
 
     set guioptions-=m
     set guioptions-=r

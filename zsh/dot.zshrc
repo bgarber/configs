@@ -2,13 +2,13 @@ unset preexec_functions
 unset precmd_functions
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/bgarber/.oh-my-zsh
+  export ZSH=/home/bgarber/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bgarber"
+ZSH_THEME="spartan"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -30,7 +30,7 @@ HYPHEN_INSENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -52,18 +52,30 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux svn command-not-found debian vim gnu-utils zsh-completions)
+plugins=(git tmux svn debian gnu-utils zsh_reload)
 
 # User configuration
+
+  export PATH="/home/bgarber/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -71,35 +83,13 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig='${VISUAL} ~/.zshrc'
-alias zshconfig-theme='${VISUAL} ${ZSH}/themes/${ZSH_THEME}.zsh-theme'
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshreload='source ~/.zshrc'
-alias ohmyzsh='${VISUAL} ${ZSH}'
-#alias ll='ls -lhF'
-#alias la='ls -lhAF'
-#alias lt='ls -lhFtr'
-#alias l='ls -CFh'
-#alias rm='rm -iv'
-#alias mv='mv -iv'
-#alias cp='cp -iv'
+alias ll='ls -lhF'
 
-# Configure email
-export EMAIL=bgarber@parks.com.br
-export MAIL=/var/spool/mail/bgarber
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.zsh_aliases, instead of adding them here directly.
-if [ -f ~/.zaliases ]; then
-    . ~/.zaliases
-fi
+# Load zfunctions
 if [ -f ~/.zfunctions ]; then
-    . ~/.zfunctions
+    source ~/.zfunctions
 fi
-
-# Autocompletion with an arrow-key driven interface
-zstyle ':completion:*' menu select
-
-# Autocompletion of command line switches for aliases
-setopt completealiases
 

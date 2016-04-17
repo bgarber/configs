@@ -9,8 +9,6 @@ export PATH="/sbin:/usr/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/
 # Configure default editor
 export SVN_EDITOR=vi
 
-export TERM=xterm-256color
-
 # Enable 256-color on terminal
 case "$TERM" in
 *rxvt*)

@@ -93,3 +93,6 @@ if [ -f ~/.zfunctions ]; then
     source ~/.zfunctions
 fi
 
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+

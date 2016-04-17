@@ -163,8 +163,13 @@
 ! URxvt*tab-fg:                         colour
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
-! URxvt*url-launcher:                   google-chrome
+  URxvt*url-launcher:                   opera
   URxvt*keysym.Home:                    \033[1~
   URxvt*keysym.End:                     \033[4~
-  URxvt*keysym.F11:                     perl:fullscreen:switch
+  URxvt*keysym.KP_Home:                 \033[1~
+  URxvt*keysym.KP_End:                  \033[4~
+
+  XTerm*termName: xterm-256color
+
+  Xcursor.theme: Adwaita
 

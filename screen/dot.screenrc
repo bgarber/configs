@@ -21,3 +21,5 @@ vbell off
 
 shell -$SHELL
 
+term screen-256color
+

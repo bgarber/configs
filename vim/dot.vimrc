@@ -84,8 +84,8 @@ nmap ,<Space> :cnext<CR>
 nmap ,<Backspace> :cprevious<CR>
 
 " Mappings for tab cicling.
-map <C-h> :tabprevious<CR>
-map <C-l> :tabnext<CR>
+nmap <C-h> :tabprevious<CR>
+nmap <C-l> :tabnext<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,6 +97,8 @@ execute pathogen#infect()
 
 " Load gtags auto map
 let Gtags_Auto_Map = 1
+let Gtags_Result = "ctags"
+let Gtags_Efm = "%m\t%f\t%l"
 
 " Setup cscope output to Quickfix!
 set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -167,6 +169,7 @@ set si
 
 "C-style indenting
 set cindent
+set cinoptions=g0,:0
 
 "Don't wrap lines
 set nowrap

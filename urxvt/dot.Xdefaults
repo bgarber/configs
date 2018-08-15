@@ -102,10 +102,10 @@
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
   URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/scalable/terminal.svg
-  URxvt*font:                           xft:Liberation Mono:style=Regular:antialias=true:autohint=true:size=11
-  URxvt*boldFont:                       xft:Liberation Mono:style=Bold:antialias=true:autohint=true:size=11
-  URxvt*italicFont:                     xft:Liberation Mono:style=Italic:antialias=true:autohint=true:size=11
-  URxvt*boldItalicFont:                 xft:Liberation Mono:style=Bold Italic:antialias=true:autohint=true:size=11
+  URxvt*font:                           xft:DejaVu Sans Mono:style=Book:antialias=true:autohint=true:size=11
+  URxvt*boldFont:                       xft:DejaVu Sans Mono:style=Bold:antialias=true:autohint=true:size=11
+  URxvt*italicFont:                     xft:DejaVu Sans Mono:style=Oblique:antialias=true:autohint=true:size=11
+  URxvt*boldItalicFont:                 xft:DejaVu Sans Mono:style=Bold Oblique:antialias=true:autohint=true:size=11
 ! URxvt*intensityStyles:                boolean
 ! URxvt*inputMethod:                    name
 ! URxvt*preeditType:                    style

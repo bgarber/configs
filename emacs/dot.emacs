@@ -1,5 +1,21 @@
 ;; My general settings...
 
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
+  ;;(add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  (add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    ;; For important compatibility libraries like cl-lib
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
+(package-initialize)
+
 ; Disable bell sound
 (setq visible-bell t)
 
@@ -53,7 +69,7 @@
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
 
-; Syntax hightlighting
+; Syntax highlighting
 (global-font-lock-mode t)
 
 ; Highlight matching parenthesis
@@ -80,15 +96,32 @@
 ; Disable startup screen
 (setq inhibit-startup-screen t)
 
+; Configure ggtags
+(require 'ggtags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode)
+              (ggtags-mode 1))))
+
+(define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
+(define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
+(define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
+(define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
+(define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
+(define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
+
+(define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
+
 ;; Start of the emacs "customize" preferences. DON'T TOUCH THIS!
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(c-basic-offset 4)
+ '(c-default-style "linux")
  '(custom-enabled-themes (quote (tango-dark)))
  '(global-linum-mode t)
- '(highlight-current-line-globally nil nil (highlight-current-line))
  '(ido-mode (quote both) nil (ido))
  '(lisp-body-indent 2)
  '(lisp-indent-maximum-backtracking 2)
@@ -97,6 +130,7 @@
  '(lisp-simple-loop-indentation 2)
  '(lisp-tag-body-indentation 2)
  '(lisp-tag-indentation 2)
+ ;'(package-selected-packages (quote (helm projectile ggtags ztree)))
  '(recentf-mode t)
  '(ruby-indent-level 4))
 (custom-set-faces

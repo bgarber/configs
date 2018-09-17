@@ -50,7 +50,7 @@
 (setq default-tab-width 4)
 
 ; Change the font
-(set-frame-font "Liberation Mono-11")
+(set-frame-font "DejaVu Sans Mono-11")
 
 ; Set copy to clipboard
 (setq x-select-enable-clipboard t)

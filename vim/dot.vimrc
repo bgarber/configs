@@ -97,8 +97,8 @@ execute pathogen#infect()
 
 " Load gtags auto map
 let Gtags_Auto_Map = 1
-let Gtags_Result = "ctags"
-let Gtags_Efm = "%m\t%f\t%l"
+let Gtags_Result = "ctags-x"
+let Gtags_Efm = "%*\\S%*\\s%l%\\s%f%\\s%m"
 
 " Setup cscope output to Quickfix!
 set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -231,7 +231,7 @@ au BufNewFile,BufRead *.cgi set ft=haserl
 if has("gui_running")
     win 90 50
 
-    set guioptions-=m
+    "set guioptions-=m
     set guioptions-=r
     set guioptions-=L
     set guioptions-=T

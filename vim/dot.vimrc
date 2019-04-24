@@ -103,6 +103,8 @@ let Gtags_Efm = "%*\\S%*\\s%l%\\s%f%\\s%m"
 " Setup cscope output to Quickfix!
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
+" Setup CtrlP options
+let g:ctrlp_working_path_mod = ''
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Barra de Status

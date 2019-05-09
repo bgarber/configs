@@ -79,7 +79,7 @@ imap <C-w>e 100<C-w>+
 map <C-w>s 100<C-w>-
 imap <C-w>s 100<C-w>-
 
-" I hate to type a lot just to get to cicle in the quickfix results
+" I hate to type a lot just to iterate in the quickfix results
 nmap ,<Space> :cnext<CR>
 nmap ,<Backspace> :cprevious<CR>
 
@@ -105,6 +105,9 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 " Setup CtrlP options
 let g:ctrlp_working_path_mod = ''
+
+" Setup for EditorConfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Barra de Status

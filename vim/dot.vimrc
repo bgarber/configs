@@ -169,7 +169,7 @@ set si
 
 "C-style indenting
 set cindent
-set cinoptions=g0,:0
+set cinoptions=l1,g0,:0
 
 "Don't wrap lines
 set nowrap

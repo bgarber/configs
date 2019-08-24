@@ -79,7 +79,7 @@ imap <C-w>e 100<C-w>+
 map <C-w>s 100<C-w>-
 imap <C-w>s 100<C-w>-
 
-" I hate to type a lot just to get to cicle in the quickfix results
+" I hate to type a lot just to iterate in the quickfix results
 nmap ,<Space> :cnext<CR>
 nmap ,<Backspace> :cprevious<CR>
 
@@ -97,12 +97,17 @@ execute pathogen#infect()
 
 " Load gtags auto map
 let Gtags_Auto_Map = 1
-let Gtags_Result = "ctags"
-let Gtags_Efm = "%m\t%f\t%l"
+let Gtags_Result = "ctags-x"
+let Gtags_Efm = "%*\\S%*\\s%l%\\s%f%\\s%m"
 
 " Setup cscope output to Quickfix!
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 
+" Setup CtrlP options
+let g:ctrlp_working_path_mod = ''
+
+" Setup for EditorConfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Barra de Status
@@ -231,7 +236,7 @@ au BufNewFile,BufRead *.cgi set ft=haserl
 if has("gui_running")
     win 90 50
 
-    set guioptions-=m
+    "set guioptions-=m
     set guioptions-=r
     set guioptions-=L
     set guioptions-=T

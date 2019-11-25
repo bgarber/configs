@@ -107,7 +107,7 @@ set cscopequickfix=s-,c-,d-,i-,t-,e-
 let g:ctrlp_working_path_mod = ''
 
 " Setup for EditorConfig
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Barra de Status
@@ -116,7 +116,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 set laststatus=2
 
 " Format the statusline
-set statusline=\ %f%m%r%h\ %w%=%l,%c\ \(%p%%\)
+set statusline=\ %f%m%r%h\ %w%=%l,%c%V\ \(%p%%\)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -180,7 +180,8 @@ set cinoptions=l1,g0,:0
 set nowrap
 
 "Mostrar tabs e spaces!
-set listchars=tab:»·,trail:·
+"set listchars=tab:»·,trail:·
+set listchars=tab:·\ ,trail:·
 set list!
 
 

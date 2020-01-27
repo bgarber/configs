@@ -93,6 +93,8 @@ if [ -f ~/.zfunctions ]; then
     source ~/.zfunctions
 fi
 
+unsetopt share_history
+
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 

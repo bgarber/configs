@@ -17,7 +17,8 @@ set background=dark
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "colorscheme inkpot
-colorscheme tango2_modified
+"colorscheme tango2_modified
+colorscheme codedark
 "let xterm16_brightness = 'high'
 "let xterm16_colormap   = 'allblue'
 "colorscheme xterm16
@@ -42,6 +43,7 @@ set mouse=i
 set mousemodel=popup
 " Coloca o cursor na última linha editada desde a última abertura
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM Interface
@@ -92,13 +94,13 @@ nmap <C-l> :tabnext<CR>
 " Plugins configurations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Load Pathogen
-execute pathogen#infect()
-
 " Load gtags auto map
 let Gtags_Auto_Map = 1
 let Gtags_Result = "ctags-x"
 let Gtags_Efm = "%*\\S%*\\s%l%\\s%f%\\s%m"
+
+" Valgrind plugin
+let g:valgrind_arguments = '--track-origins=yes --leak-check=yes'
 
 " Setup cscope output to Quickfix!
 set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -109,6 +111,10 @@ let g:ctrlp_working_path_mod = ''
 " Setup for EditorConfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 
+" Set airline theme
+let g:airline_theme = 'codedark'
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Barra de Status
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -116,7 +122,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 set laststatus=2
 
 " Format the statusline
-set statusline=\ %f%m%r%h\ %w%=%l,%c%V\ \(%p%%\)
+" set statusline=\ %f%m%r%h\ %w%=%l,%c%V\ \(%p%%\)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

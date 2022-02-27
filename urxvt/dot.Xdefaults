@@ -1,4 +1,4 @@
-  URxvt*termName:                       screen-256color
+  URxvt*termName:                       rxvt-unicode-256color
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
 ! URxvt*reverseVideo:                   boolean
@@ -102,10 +102,14 @@
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
   URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/scalable/terminal.svg
-  URxvt*font:                           xft:DejaVu Sans Mono:style=Book:antialias=true:autohint=true:size=11
-  URxvt*boldFont:                       xft:DejaVu Sans Mono:style=Bold:antialias=true:autohint=true:size=11
-  URxvt*italicFont:                     xft:DejaVu Sans Mono:style=Oblique:antialias=true:autohint=true:size=11
-  URxvt*boldItalicFont:                 xft:DejaVu Sans Mono:style=Bold Oblique:antialias=true:autohint=true:size=11
+  URxvt*font:                           xft:DejaVu\ Sans\ Mono:style=Book:size=11,\
+                                        xft:VL\ Gothic:style=regular:size=10
+  URxvt*boldFont:                       xft:DejaVu\ Sans\ Mono:style=Bold:size=11,\
+                                        xft:VL\ Gothic:style=regular:size=10
+  URxvt*italicFont:                     xft:DejaVu\ Sans\ Mono:style=Italic:size=11,\
+                                        xft:VL\ Gothic:style=regular:size=10
+  URxvt*boldItalicFont:                 xft:DejaVu\ Sans\ Mono:style=Bold Italic:size=11,\
+                                        xft:VL\ Gothic:style=regular:size=10
 ! URxvt*intensityStyles:                boolean
 ! URxvt*inputMethod:                    name
 ! URxvt*preeditType:                    style
@@ -124,7 +128,7 @@
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
 ! URxvt*lineSpace:                      number
-  URxvt*letterSpace:                    -1
+  URxvt*letterSpace:                    0
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
 ! URxvt*backspacekey:                   string

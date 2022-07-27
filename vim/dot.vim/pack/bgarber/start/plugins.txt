@@ -1,0 +1,8 @@
+https://github.com/ctrlpvim/ctrlp.vim.git
+https://github.com/editorconfig/editorconfig-vim.git
+https://github.com/rust-lang/rust.vim
+http://repo.or.cz/vcscommand.git
+https://github.com/vim-airline/vim-airline.git
+https://github.com/tomasiser/vim-code-dark.git
+https://github.com/tpope/vim-fugitive.git
+https://github.com/tpope/vim-vinegar.git

@@ -128,6 +128,13 @@ let g:airline_theme = 'codedark'
 "" =         \| unlet s:temp
 "" = endif
 
+" Enable auto-rustfmt when saving a file with rust-vim
+let g:rustfmt_autosave = 1
+
+" Enable the Omni-completion function from ALE
+set omnifunc=ale#completion#OmniFunc
+
+" NetRW configurations
 let g:netrw_liststyle = 3
 
 
@@ -257,8 +264,6 @@ au BufNewFile,BufRead *.cgi set ft=haserl
 " Configuracoes gráficas (gvim) para cada OS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
-    win 90 50
-
     "set guioptions-=m
     set guioptions-=r
     set guioptions-=L

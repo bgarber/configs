@@ -8,8 +8,8 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
-#  - /path/to/alacritty.yml
+import:
+  - ~/.alacritty-themes/tango.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -182,7 +182,7 @@ font:
   #builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night)
 #colors:
@@ -332,66 +332,6 @@ font:
   # the default background. When set to `true` all cells will be transparent
   # regardless of their background color.
   #transparent_background_colors: false
-
-# Colors (One Half Dark)
-colors:
-  selection:
-    text: CellBackground
-    background: CellForeground
-
-  primary:
-    background: '0x282c34'
-    foreground: '0xdcdfe4'
-
-  normal:
-    black:   '0x282c34'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xe5c07b'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xdcdfe4'
-
-  bright:
-    black:   '0x282c34'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xe5c07b'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xdcdfe4'
-
-# Colors (Tango color palette)
-#colors:
-#  selection:
-#    text: CellBackground
-#    background: CellForeground
-#
-#  primary:
-#    background: '0x2e3436'
-#    foreground: '0xd3d7cf'
-#
-#  normal:
-#    black:   '0x2e3436'
-#    red:     '0xcc0000'
-#    green:   '0x4e9a06'
-#    yellow:  '0xc4a000'
-#    blue:    '0x3465a4'
-#    magenta: '0x75507b'
-#    cyan:    '0x06989a'
-#    white:   '0xd3d7cf'
-#
-#  bright:
-#    black:   '0x555753'
-#    red:     '0xef2929'
-#    green:   '0x8ae234'
-#    yellow:  '0xfce94f'
-#    blue:    '0x729fcf'
-#    magenta: '0xad7fa8'
-#    cyan:    '0x34e2e2'
-#    white:   '0xeeeeec'
 
 # Bell
 #

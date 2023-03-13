@@ -114,21 +114,25 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 " Set airline theme
 let g:airline_theme = 'codedark'
 
-"" = " Setup for vim-go
-"" = let g:go_fmt_command = "goimports"
-"" = let g:go_metalinter_autosave = 1
-"" = " let g:go_debug = ['shell-commands']
-"" = " let g:go_auto_type_info = 1
+""" " Setup for vim-go
+""" let g:go_fmt_command = 'goimports'
+""" let g:go_metalinter_autosave = 1
+""" "let g:go_debug = ['shell-commands']
+""" "let g:go_auto_type_info = 1
+"""
+""" if exists('$GOPATH')
+"""     autocmd BufRead *.go
+"""         \ let s:temp = matchlist(expand('%:p'),
+"""            \ $GOPATH . '/src/\(github.hpe.com/pivs/[^/]\+\)')
+"""         \| if len(s:temp) > 1 | exe 'silent :GoGuruScope ' . s:temp[1] . '/...' | endif
+"""         \| unlet s:temp
+""" endif
 
-"" = if exists('$GOPATH')
-"" =     autocmd BufRead *.go
-"" =         \ let s:temp = matchlist(expand('%:p'),
-"" =            \ $GOPATH . '/src/\(github.hpe.com/pivs/[^/]\+\)')
-"" =         \| if len(s:temp) > 1 | exe 'silent :GoGuruScope ' . s:temp[1] . '/...' | endif
-"" =         \| unlet s:temp
-"" = endif
+" Setup for ALE plugin
+let g:ale_lint_on_text_changed = 'never' " check while typing is good, but noisy
+let g:ale_virtualtext_cursor = 0
 
-" Enable auto-rustfmt when saving a file with rust-vim
+" Enable auto-rustfmt when saving a file with rust.vim
 let g:rustfmt_autosave = 1
 
 " Enable the Omni-completion function from ALE

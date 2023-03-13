@@ -1,4 +1,4 @@
-  URxvt*termName:                       rxvt-unicode-256color
+! URxvt*termName:                       screen-256color
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
 ! URxvt*reverseVideo:                   boolean
@@ -16,7 +16,7 @@
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
-! URxvt*transparent:                    boolean
+  URxvt*transparent:                    false
 ! URxvt*tintColor:                      color
 ! URxvt*shading:                        number
 ! URxvt*blurRadius:                     HxV
@@ -33,7 +33,7 @@
 ! URxvt*cursorUnderline:                boolean
   URxvt*cursorBlink:                    true
   URxvt*pointerBlank:                   false
-  URxvt*background:                     rgba:2e00/3400/3600/ffff
+  URxvt*background:                     #2e3436
   URxvt*foreground:                     #eeeeec
 !!! Tango color palette !!!
 ! black dark/light
@@ -60,31 +60,6 @@
 ! white dark/light
   URxvt*color7:             #d3d7cf
   URxvt*color15:            #eeeeec
-!!! Gnome-terminal color palette !!!
-!! black
-!  URxvt*color0  : #2E3436
-!  URxvt*color8  : #555753
-!! red
-!  URxvt*color1  : #CC0000
-!  URxvt*color9  : #EF2929
-!! green
-!  URxvt*color2  : #4E9A06
-!  URxvt*color10 : #8AE234
-!! yellow
-!  URxvt*color3  : #C4A000
-!  URxvt*color11 : #FCE94F
-!! blue
-!  URxvt*color4  : #3465A4
-!  URxvt*color12 : #729FCF
-!! magenta
-!  URxvt*color5  : #75507B
-!  URxvt*color13 : #AD7FA8
-!! cyan
-!  URxvt*color6  : #06989A
-!  URxvt*color14 : #34E2E2
-!! white
-!  URxvt*color7  : #D3D7CF
-!  URxvt*color15 : #EEEEEC
 ! URxvt*colorBD:                        color
 ! URxvt*colorIT:                        color
 ! URxvt*colorUL:                        color
@@ -101,7 +76,7 @@
 ! URxvt*borderColor:                    color
 ! URxvt*path:                           search path
 ! URxvt*backgroundPixmap:               file[;geom]
-  URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/scalable/terminal.svg
+! URxvt*iconFile:                       /home/bgarber/.icons/Faenza/apps/scalable/terminal.svg
   URxvt*font:                           xft:DejaVu\ Sans\ Mono:style=Book:size=11,\
                                         xft:VL\ Gothic:style=regular:size=10
   URxvt*boldFont:                       xft:DejaVu\ Sans\ Mono:style=Bold:size=11,\
@@ -128,7 +103,7 @@
 ! URxvt*internalBorder:                 number
 ! URxvt*borderLess:                     boolean
 ! URxvt*lineSpace:                      number
-  URxvt*letterSpace:                    0
+  URxvt*letterSpace:                    -1
 ! URxvt*skipBuiltinGlyphs:              boolean
 ! URxvt*pointerBlankDelay:              number
 ! URxvt*backspacekey:                   string
@@ -168,12 +143,8 @@
 ! URxvt*tabbar-bg:                      colour
 ! URxvt*tabbar-fg:                      colour
   URxvt*url-launcher:                   opera
-  URxvt*keysym.Home:                    \033[1~
-  URxvt*keysym.End:                     \033[4~
-  URxvt*keysym.KP_Home:                 \033[1~
-  URxvt*keysym.KP_End:                  \033[4~
-
-  XTerm*termName: xterm-256color
-
-  Xcursor.theme: Adwaita
+! URxvt*keysym.Home:                    \033[1~
+! URxvt*keysym.End:                     \033[4~
+! URxvt*keysym.KP_Home:                 \033[1~
+! URxvt*keysym.KP_End:                  \033[4~
 

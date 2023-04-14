@@ -131,12 +131,32 @@ let g:airline_theme = 'codedark'
 " Setup for ALE plugin
 let g:ale_lint_on_text_changed = 'never' " check while typing is good, but noisy
 let g:ale_virtualtext_cursor = 0
+"call ch_logfile(expand('/tmp/chlogfile.log'), 'w')
+let g:ale_linters = {
+            \ 'rust': [
+            \   'analyzer'
+            \ ]
+\}
+let g:ale_fixers = {
+            \ 'rust': [
+                \ 'rustfmt'
+            \]
+\}
+
+""" ALE setup for Rust
+
+""" ALE setup for Python
+let g:ale_python_auto_poetry = 1
+let g:ale_python_flake8_options = '--max-line-length 160 --ignore=E121,E123,E126,E226,E24,E704,W503,W504,E501'
+let g:ale_python_mypy_options = '--ignore-missing-imports'
+let g:ale_python_pylint_options = '--disable=all --enable=duplicate-code --min-similarity-lines=40'
+
+""" Enable the Omni-completion function
+set omnifunc=ale#completion#OmniFunc
 
 " Enable auto-rustfmt when saving a file with rust.vim
 let g:rustfmt_autosave = 1
 
-" Enable the Omni-completion function from ALE
-set omnifunc=ale#completion#OmniFunc
 
 " NetRW configurations
 let g:netrw_liststyle = 3

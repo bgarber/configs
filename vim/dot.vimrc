@@ -114,23 +114,16 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 " Set airline theme
 let g:airline_theme = 'codedark'
 
-""" " Setup for vim-go
-""" let g:go_fmt_command = 'goimports'
-""" let g:go_metalinter_autosave = 1
-""" "let g:go_debug = ['shell-commands']
-""" "let g:go_auto_type_info = 1
-"""
-""" if exists('$GOPATH')
-"""     autocmd BufRead *.go
-"""         \ let s:temp = matchlist(expand('%:p'),
-"""            \ $GOPATH . '/src/\(github.hpe.com/pivs/[^/]\+\)')
-"""         \| if len(s:temp) > 1 | exe 'silent :GoGuruScope ' . s:temp[1] . '/...' | endif
-"""         \| unlet s:temp
-""" endif
+" Setup for vim-go
+let g:go_fmt_command = 'goimports'
+let g:go_metalinter_autosave = 1
+"let g:go_debug = ['shell-commands']
+"let g:go_auto_type_info = 1
 
 " Setup for ALE plugin
 let g:ale_lint_on_text_changed = 'never' " check while typing is good, but noisy
 let g:ale_virtualtext_cursor = 0
+let g:ale_completion_enabled = 1
 "call ch_logfile(expand('/tmp/chlogfile.log'), 'w')
 let g:ale_linters = {
             \ 'rust': [
@@ -143,7 +136,8 @@ let g:ale_fixers = {
             \]
 \}
 
-""" ALE setup for Rust
+""" Enable the Omni-completion function
+set omnifunc=ale#completion#OmniFunc
 
 """ ALE setup for Python
 let g:ale_python_auto_poetry = 1
@@ -151,8 +145,6 @@ let g:ale_python_flake8_options = '--max-line-length 160 --ignore=E121,E123,E126
 let g:ale_python_mypy_options = '--ignore-missing-imports'
 let g:ale_python_pylint_options = '--disable=all --enable=duplicate-code --min-similarity-lines=40'
 
-""" Enable the Omni-completion function
-set omnifunc=ale#completion#OmniFunc
 
 " Enable auto-rustfmt when saving a file with rust.vim
 let g:rustfmt_autosave = 1

@@ -14,14 +14,8 @@ syntax on
 set background=dark
 
 " Esquema de cores
-"let g:solarized_termcolors=256
-"colorscheme solarized
-"colorscheme inkpot
-"colorscheme tango2_modified
-colorscheme codedark
-"let xterm16_brightness = 'high'
-"let xterm16_colormap   = 'allblue'
-"colorscheme xterm16
+let g:gruvbox_contrast_dark='soft'
+colorscheme gruvbox
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -112,13 +106,15 @@ let g:ctrlp_working_path_mod = ''
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 
 " Set airline theme
-let g:airline_theme = 'codedark'
+let g:airline_theme = 'gruvbox'
 
 " Setup for vim-go
 let g:go_fmt_command = 'goimports'
+let g:go_metalinter_enabled = ['golangci-lint', 'vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
 "let g:go_debug = ['shell-commands']
 "let g:go_auto_type_info = 1
+let g:go_fmt_fail_silently = 1
 
 " Setup for ALE plugin
 let g:ale_lint_on_text_changed = 'never' " check while typing is good, but noisy
@@ -144,6 +140,9 @@ let g:ale_python_auto_poetry = 1
 let g:ale_python_flake8_options = '--max-line-length 160 --ignore=E121,E123,E126,E226,E24,E704,W503,W504,E501'
 let g:ale_python_mypy_options = '--ignore-missing-imports'
 let g:ale_python_pylint_options = '--disable=all --enable=duplicate-code --min-similarity-lines=40'
+
+""" ALE setup for Go
+let g:ale_go_golangci_lint_package = 1
 
 
 " Enable auto-rustfmt when saving a file with rust.vim
@@ -261,7 +260,7 @@ function CFuncoes()
     imap [ []<Left>
     imap { {<CR>}<Up><End><CR>
 endfunction
-au FileType h,c,cpp,java,perl,rb,go,rs call CFuncoes()
+au FileType h,c,cpp,java,perl,go,rust call CFuncoes()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -284,6 +283,8 @@ if has("gui_running")
     set guioptions-=r
     set guioptions-=L
     set guioptions-=T
+
+    set lines=24 columns=80
 
     if has("unix")
         set guifont=DejaVu\ Sans\ Mono\ 11

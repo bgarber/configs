@@ -108,34 +108,45 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 
 " Set airline theme
 let g:airline_theme = 'gruvbox'
-let g:airline#extensions#tagbar#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tagbar#enabled = 0
 
 " Setup for vim-go
 let g:go_fmt_command = 'goimports'
-let g:go_metalinter_enabled = ['golangci-lint', 'vet', 'golint', 'errcheck']
+let g:go_fmt_options = {
+            \ 'goimports': '-local github.com/glcp',
+            \}
+let g:go_metalinter_command = 'golangci-lint'
 let g:go_metalinter_autosave = 1
+let g:go_jump_to_error = 0
+let g:go_highlight_extra_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_parameters = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_variable_declarations = 1
 "let g:go_debug = ['shell-commands']
-"let g:go_auto_type_info = 1
-let g:go_fmt_fail_silently = 1
 
 " Setup for ALE plugin
 let g:ale_lint_on_text_changed = 'never' " check while typing is good, but noisy
 let g:ale_virtualtext_cursor = 0
 let g:ale_completion_enabled = 1
+let g:ale_fix_on_save = 1
 "call ch_logfile(expand('/tmp/chlogfile.log'), 'w')
-let g:ale_linters = {
-            \ 'rust': [
-            \   'analyzer'
-            \ ]
-\}
-let g:ale_fixers = {
-            \ 'rust': [
-                \ 'rustfmt'
-            \]
-\}
 
-""" Enable the Omni-completion function
-set omnifunc=ale#completion#OmniFunc
+let g:ale_linters = {
+            \ 'rust': [ 'analyzer' ]
+            \}
+let g:ale_linters_ignore = {
+            \ 'python': [ 'ruff' ]
+            \}
+let g:ale_fixers = {
+            \ 'rust': [ 'rustfmt' ],
+            \ 'go': [ 'goimports' ]
+            \}
 
 """ ALE setup for Python
 let g:ale_python_auto_poetry = 1
@@ -145,6 +156,12 @@ let g:ale_python_pylint_options = '--disable=all --enable=duplicate-code --min-s
 
 """ ALE setup for Go
 let g:ale_go_golangci_lint_package = 1
+let g:ale_go_goimports_options = '-local github.com/glcp'
+
+""" ALE setup for Rust
+
+""" Enable the Omni-completion function
+set omnifunc=ale#completion#OmniFunc
 
 
 " Enable auto-rustfmt when saving a file with rust.vim
@@ -173,9 +190,6 @@ set laststatus=2
 iab xdata <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 iab xnome Bryan Garber da Silva
 
-" Frequent used logs
-iab klog printk(KERN_ERR "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);<DEL><DEL>
-iab slog syslog(LOG_ERR, "[bgarber] %s:%d \n",<CR>__FUNCTION__, __LINE__);<DEL><DEL>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -281,7 +295,6 @@ au BufNewFile,BufRead *.cgi set ft=haserl
 " Configuracoes gráficas (gvim) para cada OS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_running")
-    "set guioptions-=m
     set guioptions-=r
     set guioptions-=L
     set guioptions-=T
@@ -297,16 +310,9 @@ endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use 24-bit (true-color) mode in Vim/Neovim.
+" Use 24-bit (true-color) mode in Vim.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if (getenv('TERM_PROGRAM') != 'Apple_Terminal')
-  if (has("nvim"))
-    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
   if (has("termguicolors"))
     set termguicolors
   endif

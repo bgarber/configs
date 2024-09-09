@@ -1,11 +1,11 @@
-http://repo.or.cz/vcscommand.git
 https://github.com/ctrlpvim/ctrlp.vim.git
 https://github.com/dense-analysis/ale.git
 https://github.com/editorconfig/editorconfig-vim.git
 https://github.com/fatih/vim-go.git
 https://github.com/joshdick/onedark.vim.git
 https://github.com/morhetz/gruvbox.git
-https://github.com/rust-lang/rust.vim
+https://github.com/preservim/tagbar.git
+https://github.com/sonph/onehalf.git
 https://github.com/tomasiser/vim-code-dark.git
 https://github.com/tpope/vim-fugitive.git
 https://github.com/tpope/vim-vinegar.git

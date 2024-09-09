@@ -14,9 +14,10 @@ syntax on
 set background=dark
 
 " Esquema de cores
-let g:gruvbox_contrast_dark='soft'
-let g:gruvbox_italic=1
-colorscheme gruvbox
+"let g:gruvbox_italic=1
+"let g:gruvbox_contrast_dark='medium'
+"let g:onedark_terminal_italics=1
+colorscheme onehalfdark
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -38,6 +39,7 @@ set mouse=i
 set mousemodel=popup
 " Coloca o cursor na última linha editada desde a última abertura
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
+set cursorline
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -107,7 +109,7 @@ let g:ctrlp_working_path_mod = ''
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 
 " Set airline theme
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'onehalfdark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tagbar#enabled = 0
 
@@ -120,18 +122,21 @@ let g:go_metalinter_command = 'golangci-lint'
 let g:go_metalinter_autosave = 1
 let g:go_jump_to_error = 0
 let g:go_highlight_extra_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_parameters = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
+"let g:go_highlight_build_constraints = 1
+"let g:go_highlight_fields = 1
 let g:go_highlight_format_strings = 1
+let g:go_highlight_function_calls = 1
+"let g:go_highlight_function_parameters = 1
+let g:go_highlight_functions = 1
+"let g:go_highlight_operators = 1
+let g:go_highlight_types = 1
 let g:go_highlight_variable_declarations = 1
 "let g:go_debug = ['shell-commands']
 
 " Setup for ALE plugin
 let g:ale_lint_on_text_changed = 'never' " check while typing is good, but noisy
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 1
 let g:ale_virtualtext_cursor = 0
 let g:ale_completion_enabled = 1
 let g:ale_fix_on_save = 1

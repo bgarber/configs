@@ -4,6 +4,30 @@
 " Original de = Otavio Correa Cordeiro
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim-plug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin()
+
+Plug 'dense-analysis/ale'
+Plug 'github/copilot.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'preservim/tagbar'
+Plug 'vim-airline/vim-airline'
+Plug 'tomasiser/vim-code-dark'
+Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go'
+Plug 'tpope/vim-vinegar'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+Plug 'NLKNguyen/papercolor-theme'
+
+call plug#end()
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Cores e Fontes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -17,7 +41,7 @@ set background=dark
 "let g:gruvbox_italic=1
 "let g:gruvbox_contrast_dark='medium'
 "let g:onedark_terminal_italics=1
-colorscheme onehalfdark
+colorscheme catppuccin_macchiato
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,7 +133,7 @@ let g:ctrlp_working_path_mod = ''
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', '*COMMIT_EDITMSG']
 
 " Set airline theme
-let g:airline_theme = 'onehalfdark'
+let g:airline_theme = 'catppuccin_mocha'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tagbar#enabled = 0
 
@@ -134,12 +158,20 @@ let g:go_highlight_variable_declarations = 1
 "let g:go_debug = ['shell-commands']
 
 " Setup for ALE plugin
-let g:ale_lint_on_text_changed = 'never' " check while typing is good, but noisy
+""" Lint file only on save, please
+let g:ale_lint_on_text_changed = 0 " check while typing is good, but noisy
 let g:ale_lint_on_enter = 0
+let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_save = 1
+
+""" Do not polute buffer
 let g:ale_virtualtext_cursor = 0
 let g:ale_completion_enabled = 1
+
+""" Call fixers on saving
 let g:ale_fix_on_save = 1
+
+""" Debug plugin
 "call ch_logfile(expand('/tmp/chlogfile.log'), 'w')
 
 let g:ale_linters = {
@@ -167,11 +199,6 @@ let g:ale_go_goimports_options = '-local github.com/glcp'
 
 """ Enable the Omni-completion function
 set omnifunc=ale#completion#OmniFunc
-
-
-" Enable auto-rustfmt when saving a file with rust.vim
-let g:rustfmt_autosave = 1
-
 
 " NetRW configurations
 let g:netrw_liststyle = 3
@@ -279,9 +306,10 @@ au FileType tex,bib call TexFunctions()
 function CFuncoes()
     imap ( ()<Left>
     imap [ []<Left>
-    imap { {<CR>}<Up><End><CR>
+    imap { {}<Left>
+    imap " <C-V>"<C-V>"<left>
 endfunction
-au FileType h,c,cpp,java,perl,go,rust call CFuncoes()
+au FileType h,c,cpp,java,perl,go,rust,python call CFuncoes()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

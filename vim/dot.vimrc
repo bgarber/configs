@@ -23,7 +23,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 Plug 'tpope/vim-vinegar'
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'vim-scripts/CursorLineCurrentWindow'
 
 call plug#end()
 
@@ -160,13 +160,13 @@ let g:go_highlight_variable_declarations = 1
 " Setup for ALE plugin
 """ Lint file only on save, please
 let g:ale_lint_on_text_changed = 0 " check while typing is good, but noisy
-let g:ale_lint_on_enter = 0
+let g:ale_lint_on_enter = 1
 let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_save = 1
 
 """ Do not polute buffer
 let g:ale_virtualtext_cursor = 0
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 
 """ Call fixers on saving
 let g:ale_fix_on_save = 1

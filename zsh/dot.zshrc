@@ -77,6 +77,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export LESS=-RFX
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -101,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias zshreload='source ~/.zshrc'
 alias ll='ls -lhF'
+alias docker-compose='docker compose'
 
 # Load zfunctions
 if [ -f ~/.zfunctions ]; then
@@ -108,4 +110,4 @@ if [ -f ~/.zfunctions ]; then
 fi
 
 unsetopt share_history
-
+fpath+=${ZDOTDIR:-~}/.zsh_functions

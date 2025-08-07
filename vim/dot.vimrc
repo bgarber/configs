@@ -182,7 +182,8 @@ let g:ale_linters_ignore = {
             \}
 let g:ale_fixers = {
             \ 'rust': [ 'rustfmt' ],
-            \ 'go': [ 'goimports' ]
+            \ 'go': [ 'goimports' ],
+            \ 'python': [ 'black', 'isort' ],
             \}
 
 """ ALE setup for Python
@@ -190,6 +191,7 @@ let g:ale_python_auto_poetry = 1
 let g:ale_python_flake8_options = '--max-line-length 160 --ignore=E121,E123,E126,E226,E24,E704,W503,W504,E501'
 let g:ale_python_mypy_options = '--ignore-missing-imports'
 let g:ale_python_pylint_options = '--disable=all --enable=duplicate-code --min-similarity-lines=40'
+let g:ale_python_black_options = '--line-length 90'
 
 """ ALE setup for Go
 let g:ale_go_golangci_lint_package = 1
